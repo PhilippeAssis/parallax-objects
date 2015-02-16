@@ -1,21 +1,20 @@
 .parallaxObjects{
-    /*background-image: url("objetos.png");*/
     background-repeat: no-repeat;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     opacity: 1;
 }
-.parallaxObjectsWrapAbsolute{
+.parallaxObjects-WrapAbsolute{
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
 }
-.parallaxObjectsWrapRelative{
+.parallaxObjects-WrapRelative{
     position: relative;
     width: 100%;
     height: 100%;
 }
-.parallaxObjectsWrapContent{
+.parallaxObjects-WrapContent{
     position: relative;
 }

@@ -70,7 +70,7 @@
             opacity: -1, //Opacity css no elemento (1 diminui, 0 inativo, 1 aumenta).
             speedOpacity: 0.5, //Velocidade da opacidade relativa a rolagem
             zoom : 0, //Zoom css no elemento (-1 diminui, 0 inativo, 1 aumenta).
-            speed : 0.5, // velocidade do speedimento, baseado no scroll
+            speed : 0.5, // velocidade do speed, baseado no scroll
             speedRandom : false, // Velocidade de elementos aleatorias
             viewport : 200,// Determina quando a animação inicia
             viewportBottom : true, //Usa a base para determinar a distancia do viewport
