@@ -87,7 +87,7 @@
 
         target.creatorObjects(data,options);
 
-        var objects = $('.parallaxObjects-WrapRelative',target).find('.parallax');
+        var objects = $('.parallaxObjects-WrapRelative', target).find('.parallaxObjects');
 
         function empty(obj){
             if(typeof obj == 'undefined')
