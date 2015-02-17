@@ -1,7 +1,6 @@
 .parallaxObjects{
     background-repeat: no-repeat;
     position: absolute;
-    z-index: 1;
     opacity: 1;
 }
 .parallaxObjects-WrapAbsolute{
@@ -9,6 +8,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
 }
 .parallaxObjects-WrapRelative{
     position: relative;
