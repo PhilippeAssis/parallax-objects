@@ -2,6 +2,7 @@
     background-repeat: no-repeat;
     position: absolute;
     opacity: 1;
+    /*z-index: -1;*/
 }
 .parallaxObjects-WrapAbsolute{
     position: absolute;
