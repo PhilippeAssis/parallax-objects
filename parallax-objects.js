@@ -138,8 +138,6 @@
                 return eval(value);
         }
 
-        var PTS;//Postition Target
-
         if(options.viewportBottom)
             options.viewport = $(window).height() - options.viewport;
 
@@ -155,8 +153,6 @@
                 else if(PTS >= top)
                     return;
             }
-            else if(!PTS)
-                PTS = top;
 
             for(i=0; objects.length > i;i++){
                 var obj = $(objects[i]);
@@ -180,7 +176,7 @@
                     topObj = eval(obj.attr('pxoTop'));
 
                     if(y > 0){
-                        calc = topObj - ((top - PTS) * speed);
+                        calc = topObj - (top * speed);
                         if(limit && calc < limit)
                             calc = limit;
 
@@ -188,7 +184,7 @@
 
                     }
                     else if(y < 0){
-                        calc = topObj + ((top - PTS) * speed);
+                        calc = topObj + (top * speed);
                         if(limit && calc > limit)
                             calc = limit;
 
@@ -207,9 +203,9 @@
                     leftObj = eval(obj.attr('pxoLeft'));
 
                     if(x < 0)
-                        obj.css('left',(leftObj - ((top - PTS) * speed)) + 'px');
+                        obj.css('left',(leftObj - (top * speed)) + 'px');
                     else if(x > 0)
-                        obj.css('left',(leftObj + ((top - PTS) * speed)) + 'px');
+                        obj.css('left',(leftObj + (top * speed)) + 'px');
                 }
 
                 //Zoom
@@ -220,9 +216,9 @@
                     zoomObj = eval(obj.attr('pxoZoom'));
 
                     if(z > 0)
-                        obj.css('zoom',(zoomObj + ((top - PTS) * speed))+'%');
+                        obj.css('zoom',(zoomObj + (top * speed))+'%');
                     else if(z < 0)
-                        obj.css('zoom',(zoomObj - ((top - PTS) * speed))+'%');
+                        obj.css('zoom',(zoomObj - (top * speed))+'%');
                 }
 
                 //Fade
@@ -233,7 +229,7 @@
                     var opacityObj = empty(eval(obj.attr('pxoOpacity')));
                     var speedOpacity = empty(eval(obj.attr('pxoOs'))) || options.speedOpacity;
 
-                    var calc = ((top - PTS) * 0.5) * (speedOpacity * 0.01);
+                    var calc = (top * 0.5) * (speedOpacity * 0.01);
 
                     if(o > 0)
                         obj.css('opacity',opacityObj + calc);
@@ -243,6 +239,8 @@
             }
 
         };
+
+        parallax();
 
         $(window).on('touchmove scroll',function(){
             parallax();
