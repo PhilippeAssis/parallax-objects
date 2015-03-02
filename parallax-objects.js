@@ -1,6 +1,7 @@
 /**
  * Parallax Objects
  * */
+
 (function ($) {
     $.fn.pxoCreatorObjects = function(objects,options){
         function isNotUndefined(obj){
