@@ -1,8 +1,7 @@
 /**
- * Parallax Objects
- * */
-(function ($) {
-    $.fn.pxoCreatorObjects = function (objects, options) {
+* Parallax Objects
+* */(function ($) {
+    $.fn.creatorObjects = function(objects,options){
         function isNotUndefined(obj){
             if(typeof obj == 'undefined')
                 return false;
@@ -61,32 +60,6 @@
         }
     };
 
-    $.fn.pxoUpdateObjects = function (object, options) {
-        if (object === 0)
-            object = '0'
-
-        obj = $('.parallaxObjects-Object' + object, this);
-
-
-        if (options.speed)
-            obj.attr('pxoSpeed', options.speed)
-
-        if (options.limit)
-            obj.attr('pxoLimit', options.limit)
-
-        if (options.y)
-            obj.attr('pxoY', options.y)
-
-        if (options.x)
-            obj.attr('pxoX', options.x)
-
-        if (options.zoom)
-            obj.attr('pxoZ', options.zoom)
-
-        if (options.opacity)
-            obj.attr('pxoO', options.opacity)
-    };
-
     $.fn.parallaxObjects = function(data,custom){
 
         var target = $(this);
@@ -112,7 +85,7 @@
         if(typeof(custom) == 'object')
             options = $.extend(options, custom);
 
-        target.pxoCreatorObjects(data, options);
+        target.creatorObjects(data,options);
 
         var objects = $('.parallaxObjects-WrapRelative', target).find('.parallaxObjects');
 
@@ -144,8 +117,8 @@
             options.viewport = $(window).height() - options.viewport;
 
         /*
-         * Parallax
-         * */
+        * Parallax
+        * */
         var parallax = function(){
             var top = $(window).scrollTop();
 
@@ -243,6 +216,8 @@
             }
 
         };
+
+        parallax();
 
         $(window).on('touchmove scroll',function(){
             parallax();
