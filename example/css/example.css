@@ -1,0 +1,192 @@
+/*@import url(http://fonts.googleapis.com/css?family=Abel);*/
+/* latin */
+@font-face {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Abel'), local('Abel-Regular'), url("../fonts/abel.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body,
+html {
+    margin: 0;
+    font-family: Abel, Abel-Regular, Helvetica, Arial;
+}
+
+section,
+footer {
+    clear: left;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+footer {
+    background-color: #324c5d;
+    height: 100vh;
+}
+
+section:nth-child(1) {
+    background-color: #f2f2f2;
+    color: #46474b;
+    height: 1000vh;
+    text-align: center;
+}
+
+section:nth-child(1) h1 {
+    font-size: 5em;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 0;
+}
+
+section:nth-child(1) h2 {
+    margin-top: 0;
+}
+
+section:nth-child(1) a {
+    font-size: 2em;
+    background-color: #df494a;
+    padding: 5px 20px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+section:nth-child(1) a:hover {
+    background-color: #46474b;
+}
+
+section:nth-child(13) {
+    height: 25vh;
+    background-color: #78cbc3;
+}
+
+section:nth-child(12) {
+    height: 30vh;
+    background-color: #7acb73;
+}
+
+section:nth-child(11) {
+    height: 35vh;
+    background-color: #c0cb66;
+}
+
+section:nth-child(10) {
+    height: 40vh;
+    background-color: #b17d50;
+}
+
+section:nth-child(9) {
+    height: 45vh;
+    background-color: #b1404b;
+}
+
+section:nth-child(8) {
+    height: 50vh;
+    background-color: #b144b0;
+}
+
+section:nth-child(7) {
+    height: 55vh;
+    background-color: #7f4ab1;
+}
+
+section:nth-child(6) {
+    height: 60vh;
+    background-color: #4390b1;
+}
+
+section:nth-child(5) {
+    height: 65vh;
+    background-color: #46b19d;
+}
+
+section:nth-child(4) {
+    height: 70vh;
+    background-color: #efc94c;
+}
+
+section:nth-child(3) {
+    height: 75vh;
+    background-color: #e3793f;
+}
+
+section:nth-child(2) {
+    height: 80vh;
+    background-color: #df494a;
+}
+
+.background-color-1 {
+    background-color: #f2f2f2;
+}
+
+.background-color-2 {
+    background-color: #46474b;
+}
+
+.font-color-1 {
+    color: #f2f2f2;
+}
+
+.font-color-2 {
+    color: #46474b;
+}
+
+.objbase-1 {
+    top: 200px;
+    left: 50%;
+    z-index: 10;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: #46474b;
+    color: #f2f2f2;
+}
+
+.objbase-2 {
+    top: 400px;
+    left: 50%;
+    z-index: 10;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: #46474b;
+    color: #f2f2f2;
+}
+
+/*.objbase-3*/
+/*top -180vh*/
+/*left 50%*/
+/*z-index 10*/
+/*circle(20,$colors[2])*/
+/*$nexobj = 3*/
+/*for numi in (1..5)*/
+/*for num in (1..8)*/
+/*.obj-{$nexobj}*/
+/*top 0 + (numi * 200)px*/
+/*left (num * 16)%*/
+/*circle(10,$colors[1])*/
+/*$nexobj = $nexobj + 1*/
+/*section:nth-child(3)*/
+/*h2*/
+/*margin-top  10vh*/
+/*text-align center*/
+/*font-size 3em*/
+/*color $color1*/
+/*margin-bottom 100px*/
+/*&:nth-child(3)*/
+/*margin-top 0px*/
+/*pre*/
+/*position relative*/
+/*left 50%*/
+/*width 50%*/
+/*transform: translate(-50%, -50%);*/
+/*code*/
+/*padding 30px*/
+/*.obj-example-1*/
+/*top 20%*/
+/*left -30px*/
+/*circle(30,$colors[2])*/

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../dist/css/parallax-objects.css" rel='stylesheet' type='text/css'>
+    <link href='css/example.css' rel='stylesheet' type='text/css'>
+    <link href='css/styles/dark.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<section>
+    <h1>Parallax Object</h1>
+
+    <h2>Parallax effect for independent and absolute objects for jQuery.</h2>
+    <a class="play">Play</a>
+</section>
+<section></section>
+<section>
+    <h2>This is the next animation code.</h2>
+
+        <pre><code class="javascript">$("#example1").parallaxObjects([
+            {
+            class: 'obj-example-1',
+            x: 1
+            }
+            ])</code></pre>
+    <h2>Easy right?</h2>
+</section>
+<section id="example1"></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+
+<footer></footer>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="../dist/js/isInViewport.min.js"></script>
+<script src="../dist/js/parallax-objects.js"></script>
+<script src="js/highlight.pack.js"></script>
+<script>
+    $(function () {
+        sec = $("section:eq(0)")
+        $("section:eq(0)").parallaxObjects([
+            {
+                class: 'objbase-1',
+                speed: 1.1,
+                viewportBase: 'top',
+                y: -1,
+                limit: false
+//                        zoom : 1,
+//                        fade : -1
+            }, {
+                class: 'objbase-2',
+                speed: 1.1,
+                viewportBase: 'top',
+                y: -1,
+                limit: false
+//                        zoom : 1,
+//                        fade : -1
+            }])
+
+        $("section:eq(0)").on('parallaxUpgrade', function (a, data) {
+            if (data[1].top > 1000)
+                $(this).parallaxUpdate(data, 1, {x: 1});
+        })
+//
+
+
+//        section2 = []
+
+//        quant = 5 * 8;
+
+//        for (i = 1; i <= quant; i++)
+//            section2.push({
+//                class: 'obj-' + (i + 2),
+//                speed: 0.2,
+//                y: 1,
+//                x: -1,
+//                opacity: 0,
+//                offset: false
+//            })
+//
+//        $("section:eq(1)").parallaxObjects([
+//                    {
+//                        class: 'objbase-2',
+//                        speed: 1.9,
+//                        limit : false
+//                    }
+//                ]
+//        )
+//
+//        $("section:eq(2)").parallaxObjects([
+//                    {
+//                        class: 'objbase-3',
+//                        speed: 1.9,
+//                        y: -1,
+//                        opacity: 0
+//                    }
+//                ],
+//                {
+//                    viewport: 0,
+//                    viewportBottom: false,
+//                    noEnd: false
+//                }
+//        )
+
+//        $("#example1").parallaxObjects([
+//            {
+//                class: 'obj-example-1',
+//                x: 1,
+//                y: 0,
+//                speed : 0.5
+//            }
+//        ])
+    })
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
